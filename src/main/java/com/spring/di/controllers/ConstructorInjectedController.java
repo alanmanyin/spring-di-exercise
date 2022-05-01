@@ -1,7 +1,9 @@
 package com.spring.di.controllers;
 
 import com.spring.di.services.WaiService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
     WaiService waiService;
 
