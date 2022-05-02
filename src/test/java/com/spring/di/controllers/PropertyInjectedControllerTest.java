@@ -1,6 +1,6 @@
 package com.spring.di.controllers;
 
-import com.spring.di.services.WaiServiceImpl;
+import com.spring.di.services.PrimaryWaiService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         propertyInjectedController = new PropertyInjectedController();
-        propertyInjectedController.waiService = new WaiServiceImpl();
+        propertyInjectedController.waiService = new PrimaryWaiService();
     }
 
     @Test

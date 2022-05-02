@@ -10,6 +10,7 @@ package com.spring.di.controllers;
 
 import com.spring.di.services.WaiService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -17,11 +18,11 @@ public class SetterInjectedController {
     private WaiService waiService;
 
     @Autowired
-    public void setWaiService(WaiService waiService) {
+    public void setWaiService(@Qualifier("rudeWaiService") WaiService waiService) {
         this.waiService = waiService;
     }
 
     public void sayWaiAgain(){
-        waiService.wai3("點樣?");
+        waiService.wai3();
     }
 }
