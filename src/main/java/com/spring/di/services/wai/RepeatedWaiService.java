@@ -1,5 +1,4 @@
-package com.spring.di.services;
-import org.springframework.beans.factory.annotation.Qualifier;
+package com.spring.di.services.wai;
 import org.springframework.stereotype.Service;
 
 @Service

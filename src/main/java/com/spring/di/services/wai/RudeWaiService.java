@@ -1,4 +1,4 @@
-package com.spring.di.services;
+package com.spring.di.services.wai;
 import org.springframework.stereotype.Service;
 
 @Service

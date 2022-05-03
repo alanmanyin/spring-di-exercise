@@ -1,6 +1,6 @@
 package com.spring.di.controllers;
 
-import com.spring.di.services.PrimaryWaiService;
+import com.spring.di.services.wai.PrimaryWaiService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

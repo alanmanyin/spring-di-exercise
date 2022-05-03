@@ -1,9 +1,6 @@
 package com.spring.di;
 
-import com.spring.di.controllers.ConstructorInjectedController;
-import com.spring.di.controllers.PropertyInjectedController;
-import com.spring.di.controllers.SetterInjectedController;
-import com.spring.di.controllers.PrimaryController;
+import com.spring.di.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -29,8 +26,16 @@ public class DiApplication {
         ciController.sayWaiRepeatedly();
 
         System.out.println("----- primary bean -----");
-        PrimaryController controller = (PrimaryController) ctx.getBean("primaryController");
-        controller.test();
+        PrimaryController primaryController = (PrimaryController) ctx.getBean("primaryController");
+        primaryController.test();
+
+        System.out.println("----- greeting -----");
+        GreetingController greetingController = (GreetingController) ctx.getBean("greetingController");
+        greetingController.welcome();
+
+        System.out.println("----- pet -----");
+        PetController petController = (PetController) ctx.getBean("petController");
+        petController.feedPet();
 
     }
 
